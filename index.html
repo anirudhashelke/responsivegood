@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthy organic food website </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="img/logo-w.png">
+  <style>
+     @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+    header {
+      background: #f2f2f2;
+    }
+
+    aside {
+      z-index: 2;
+      visibility: hidden;
+      opacity: 0;
+      transition: 0.5s opacity, 0.5s visibility;
+    }
+
+    aside.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    aside .a_menus {
+      transform: translateX(-300px);
+      transition: 0.5s transform;
+    }
+
+    aside.active .a_menus {
+      transform: translateX(0);
+    }
+
+    /* main */
+    .a-banners{
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+    }
+   .a-banner .a-dish{
+      z-index:1;
+      position: absolute;
+      left: 90px;
+    }
+    .a-dish img{
+      width: 608px;
+    height: 569px;
+    }
+    .a_content svg{
+    width:90%;
+    margin: auto;
+    
+   }
+   .a_content_shape {
+        left:350px;
+        top: 80px;
+        height: 100%;
+       
+      }
+      .a_content_shape h1{
+        font-size: 125px;
+        font-weight: bold;
+      }
+      .a_content_shape h5{
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: #ffffff !important;
+        line-height: 1.6;
+      }
+      .a_content_shape p{
+      position: relative;
+      left: 274px;
+      }
+      /* delicitious */
+      .a-delicious-main h6{
+           font-size: 1.125rem;
+           letter-spacing: 4px;
+           color: #111111;
+           font-weight: 300;
+           padding-top: 50px;
+      }
+      .a-delicious-main h1{
+        font-size: 4.5rem;
+        font-weight: 700;
+        color: #111111;
+        padding:20px 0px;
+      }
+      .a-delicious-main .a-delicious-box h5{
+        letter-spacing: 4px;
+        font-weight: 300;
+        font-size: 1.125rem;
+        padding-bottom: 10px;
+      }
+      .a-delicious-main .a-delicious-box p{
+        color: #111111;
+      }
+
+      /* dishes */
+      .a-salads h6{
+          color: #111111;  
+      }
+      .a-salads h6 span{
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+      }
+     main .a-salad img{
+        width: 185px;
+       height: 177px;
+      }
+      main  .a-salad h5{
+        font-size: 1.125rem;
+        letter-spacing: 4px;
+        font-weight: 400;
+        color: #111111;
+      }
+      main  .a-salad h3{
+        font-weight: 700;
+       font-size: 2.25rem;
+      }
+
+      /* bolognese */
+     main .a-bolognese{
+      background-image: url("img/c-1.jpeg");
+      height: 506px;
+      background-position:50% 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+     }
+     /* lasagnia */
+     main .a-lasagnia-box{
+      padding:30px;
+      background-color: #ffffff;
+     }
+     main .a-lasagnia-box h5{
+      font-size: 1.125rem;
+      letter-spacing: 4px;
+      font-weight: 300;
+      color: #111111;
+     }
+     main .a-lasagnia-box h6{
+      font-size: 1.125rem;
+      font-weight: 700;
+      padding: 15px 0px;
+      color: #111111;
+     }
+     main .a-lasagnia-box p{
+      color: #111111;
+     }
+     main .a-lasagnia{
+      position: relative;
+      top: -93px;
+     }
+
+     /* snack */
+     main .a-snack h1{
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: #111111;
+     }
+     main .a-snack h5{
+      line-height: 2.2;
+      font-size: 1.125rem; 
+      font-weight: 300;
+      color: #111111;
+     }
+     main .a-snack .a-snacks{
+     border:7px solid #ffc002;
+     width:60%;
+     }
+
+     main .a-snack h6{
+      color: #111111;
+      font-weight: normal;
+     }
+     main .a-snack h6 span{
+      color: #ffc002;
+      text-decoration: underline;
+      text-decoration-thickness:1px;
+     }
+
+     /* oraganic */
+     main .a-oraganic{
+      background-image: url("img/c-2.jpg");
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      height:650px;
+     }
+     main .a-oraganic .a-oragans h1{
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: #111111;
+     }
+     main .a-oraganic .a-oragans h5{
+      font-size: 1.125rem;
+      color: #111111;
+     }
+     main .a-oraganic .a-oragans h5 span{
+      text-decoration: underline;
+      text-decoration-thickness:1px;
+      text-decoration-color: #ffc002;
+     }
+     main .a-oraganic .a-oragans p{
+        color: #111111;
+        padding: 10px 0px;
+     }
+
+     /* slider */
+       .a_slides-1 .a_slides-1_box {
+        width: 60%;
+      }
+      .a_slides-1 .a_slides-1_box p {
+        line-height: 35px;
+      }
+      .a_slides-1 .a_slides-1_img_box {
+        width: 150px;
+        height: 150px;
+      }
+      .a_slides-1 #carouselExampleIndicators {
+        height: 420px;
+      }
+      .a_slides-1 #carouselExampleIndicators .b_indicator {
+        background: rgba(0, 0, 0, 0.5);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: none;
+      }
+      .a_slides-1 .carousel-control-next-icon,
+      .a_slides-1 .carousel-control-prev-icon {
+        filter: invert(100%);
+      }
+
+      /* form */
+      main .a-form{
+        background-color: #f2f2f2;
+      }
+      main .a-form .a-forms{
+        border-radius: 50px;
+        background-color: #ffffff;
+        padding: 30px;
+      }
+      main .a-form .a-forms h1{
+        font-size: 4.5rem;
+        font-weight: 700;
+        color: #111111;
+       padding-bottom: 40px;
+      }
+      main .a-form .a-forms input{
+        border-radius: 50px;
+        padding:12px 15px;
+        border:1px solid #ffc002;
+        margin:25px 0px;
+      }
+      main .a-form .a-forms input:hover{
+        border:1px solid black;
+      }
+      main .a-form .a-forms button{
+        width:100%;
+        border:1px solid #ffc002;
+        border-radius: 50px;
+        padding:12px 0px;
+        letter-spacing:2px;
+        color: #111111;
+      }
+      main .a-form .a-forms button:hover{
+        background-color: #ffe69a !important;
+      }
+      /* footer */
+      footer a{
+        color: #eedeeb !important;
+        font-size: 14px;
+      }
+     footer span{
+      font-size: 14px;
+     }
+  </style>
+
+  <!-- responsive -->
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+  <!-- start header -->
+  <header class="container-fluid text-center">
+    <h3><i class="fa fa-bars" id="sidebar" aria-hidden="true"></i></h3>
+  </header>
+  <aside style="height: 100vh; width: 100%; background-color: rgba(0, 0, 0, 0.5);position: relative;"
+    class="text-white position-absolute top-0">
+    <div  style="width: 15%; background: black ;" class="h-100 a_menus ">
+      <div class="text-end">
+        <button id="sidebar_close" class="border-0 bg-transparent text-white fs-4 p-2">
+          X
+        </button>
+      </div>
+      <ul class="nav flex-column text-center mt-4">
+        <li>
+          <a class="nav-link text-white" aria-current="page" href="#">Home</a>
+        </li>
+        <li >
+          <a class="nav-link text-white" href="#">About</a>
+        </li>
+        <li >
+          <a class="nav-link text-white" href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+    <!-- main start  -->
+    <main >
+       <section style="background-color:#f2f2f2   ;"  class="py-5">
+        <div class="a-banner container mt-5 me-5 position-relative">
+        <div class="row a-banners d-flex justify-content-end ">
+          <div class="col-12 col-md-2   a-dish position-absolute ">
+            <img src="img/food.png" alt="" >
+          </div>
+          <div class="col-12 col-md-10 a_content  d-flex ">
+                <svg
+                style="fill: #ffc002"
+                class="u-svg-content __web-inspector-hide-shortcut__"
+                viewBox="0 0 160 150"
+                x="0px"
+                y="0px"
+                id="svg-d816"
+              >
+                <path
+                  d="M121.1,18C110.7,1.5,89.8-4.6,72.6,3.7c-10.5,5-17.7,14.2-20.8,24.7C48.4,39.9,42.4,48,28.3,55.5
+              c-50.6,26.9-27.3,99.4,22,84.7c14.3-4.2,29.7-1.4,43.2,5.1c13.3,6.5,29.3,6.4,43.2-1.8c21-12.5,29.3-40.1,18.8-62.7
+              c-2.5-5.4-5.9-10.1-9.8-14c-9.4-9.3-16.4-21-18.8-34.2C125.9,27.6,124,22.6,121.1,18z"
+                >
+              </path>
+              </svg>
+              <div
+              class="position-absolute a_content_shape text-white  gap-2 d-flex justify-content-center flex-column align-items-end "
+            >
+              <div class=" a-contect-salad">
+                <h1>Salad</h1>
+                <h5>Time to Get Healthy & Active</h5>
+              </div>
+              <p class="me-5 ">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore <br> eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, <br> sunt in culpa qui officia deserunt
+                mollit anim id est laborum.
+              </p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+        <!-- delicious -->
+       
+       <section class="container a-delicious-main my-5 ">
+        <h6>OUR MENU</h6>
+        <h1>Delicious From The Chef</h1>
+           <div class="row a-delicious">
+            <div class="col-12 col-md-6">
+              <div class="a-delicious-box p-5 ">
+                   <h5>PEAR SALAD / $11</h5>
+                   <p>Reid’s Orchard Pears / Bitter Greens / Granola / Big Firefly / Farms Black and Blue / Pine Nut Vinaigrette</p>
+            </div>
+          </div>
+            <div class="col-12 col-md-6">
+              <div class="a-delicious-box p-5 ">
+                <h5>BRODETTO DI PESCE / $9</h5>
+                <p>Adriatic Seafood Soup / Clams / Prawns / Livornese / Langoustine Scallop / Celery / Olive</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="a-delicious-box p-5 ">
+                <h5>FARM GREENS / $9</h5>
+                <p>Honey Vinaigrette / House Cheese Crouton / Fine Herbs</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="a-delicious-box p-5 ">
+                   <h5>GRILLED KALE / $9</h5>
+                   <p>Bitter Greens / House Cheese Crouton / Kamon Iberico</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="a-delicious-box p-5 ">
+                <h5>RICOTTA GNUD / $18</h5>
+                <p>Marinated Sardine / Red Currant / Chanterelles / Pine Nuts / Mantecato Vitello / Fennel / Olive / Pepitas</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="a-delicious-box p-5 ">
+                  <h5>CANESTRELLI / $18</h5>
+                  <p>Reid Orchatd Pears / Bitter Greens / House Cheese Crouton / Marinated Sardine / Chanterelles / Clams</p>
+              </div>
+            </div>
+           </div>
+       </section>
+
+       <!-- dishes -->
+
+       <section class="container py-5  a-salads">
+        <div class="row py-5">
+          <div class="col-12 col-md-6">
+            <div class="a-salad d-flex align-items-center px-5 gap-3">
+              <div><img src="img/1.png" alt=""></div>
+              <div>
+                <h5>CAESAR SALAD</h5>
+                <h3 class="py-3">$20</h3>
+                <p>Sample text. Click to select the text <br> box. Click again or double click to <br> start editing the text.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="a-salad d-flex align-items-center px-5 gap-3">
+              <div><img src="img/2.png" alt=""></div>
+              <div>
+                <h5>GREEK SALAD</h5>
+                <h3 class="py-3">$45</h3>
+                <p>Sample text. Click to select the text <br> box. Click again or double click to <br> start editing the text.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-12 col-md-6 py-4">
+            <div class="a-salad d-flex align-items-center py-5 px-5 gap-3">
+              <div><img src="img/3.png" alt=""></div>
+              <div>
+                <h5>MEXICAN SALAD</h5>
+                <h3 class="py-3">$13</h3>
+                <p>Sample text. Click to select the text <br> box. Click again or double click to <br> start editing the text.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 py-4">
+            <div class="a-salad d-flex align-items-center py-5 px-5 gap-3">
+              <div><img src="img/4.png" alt=""></div>
+              <div>
+                <h5>CLASSIC RICOTTA</h5>
+                <h3 class="py-3">$24</h3>
+                <p>Sample text. Click to select the text <br> box. Click again or double click to <br> start editing the text.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <h6 class="text-center">Image from <span>Freepik</span></h6>
+       </section>
+
+       <section class="a-bolognese"></section>
+
+       <!-- lasagnia -->
+       <section class=" container   d-flex justify-content-center">
+          <div class="row w-75 mx-auto   a-lasagnia ">
+            <div class="col-12 col-md-6">
+              <div class="a-lasagnia-box bg-white  ">
+                   <h5>LASAGNIA</h5>
+                   <h6>$20</h6>
+                   <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="a-lasagnia-box bg-white ">
+                   <h5>CARBONARA</h5>
+                   <h6>$45</h6>
+                   <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="a-lasagnia-box bg-white ">
+                   <h5>BOLOGNESE</h5>
+                   <h6>$13</h6>
+                   <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="a-lasagnia-box bg-white ">
+                   <h5>CLASSIC RICOTTA</h5>
+                   <h6>$24</h6>
+                   <p>Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+              </div>
+            </div>
+          </div>
+       </section>
+       <!-- snacks -->
+       <section class="container ">
+        <div class="row d-flex justify-content-center">
+          <div class="col-12 col-md-5 ">
+            <div class="a-snack ">
+              <h1 class="mt-5">Salads and snacks</h1>
+              <div class="a-snacks my-5"></div>
+              <h5>TACO PIZZA <br>
+                CHICKEN FAJITA <br>
+                BUFFALO CHICKEN<br>
+                PEPPERONI </h5>
+                <h6 class="pt-3">Image from <span>Freepik</span></h6>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 ">
+            <div class=""><img src="img/chicken.png" alt="" width="100%" height="100%"></div>
+          </div>
+        </div>
+       </section>
+
+       <!-- oraganic -->
+       <section class="a-oraganic d-flex align-items-center">
+           <div class="container text-center d-flex justify-content-center">
+               <div class=" a-oragans ">
+                <h1>100% Organic <br> Goodness</h1>
+                <p>Where we do things differently. 100% organic smoothies and <br> cold pressed juices is our thing.</p>
+                <h5>Image from <span>Freepik</span></h5>
+               </div>
+           </div>
+       </section>
+
+       <!-- slider -->
+    
+       <section class="a_slides-1 my-5">
+        <div class="container">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                aria-current="true"
+                aria-label="Slide 1"
+                class="a_indicator active"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+                class="a_indicator"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div
+                  class="d-flex a_slides-1_box justify-content-center align-items-center gap-4 flex-column text-center mx-auto"
+                >
+                  <div
+                    class="a_slides-1_img_box bg-warning p-3 rounded-pill"
+                  >
+                    <img
+                      width="100%"
+                      height="100%"
+                      class="rounded-pill"
+                      src="img/s-2.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p>
+                    "Aenean pulvinar dui ornare, feugiat lorem non, ultrices
+                    justo. Mauris efficitur, mauris in auctor euismod, quam elit
+                    ultrices urna, eget eleifend arcu risus id metus. Maecenas
+                    ex enim,​ mattis eu velit vitae, blandit mattis sapien. Sed
+                    aliquam leo et semper vestibulum."
+                  </p>
+                  <h5>MARY SMITH</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div
+                  class="d-flex a_slides-1_box justify-content-center align-items-center gap-4 flex-column text-center mx-auto"
+                >
+                  <div
+                    class="a_slides-1_img_box bg-warning p-3 rounded-pill"
+                  >
+                    <img
+                      width="100%"
+                      height="100%"
+                      class="rounded-pill"
+                      src="img/s-1.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <p>
+                    "Aenean pulvinar dui ornare, feugiat lorem non, ultrices
+                    justo. Mauris efficitur, mauris in auctor euismod, quam elit
+                    ultrices urna, eget eleifend arcu risus id metus. Maecenas
+                    ex enim,​ mattis eu velit vitae, blandit mattis sapien. Sed
+                    aliquam leo et semper vestibulum."
+                  </p>
+                  <h5>FRANK KINNEY</h5>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- form -->
+      <section class="a-form py-5">
+          <div class="container">
+           <div class="row d-flex justify-content-center text-center">
+            <div class="col-12 col-md-6 ">
+              <div class="a-forms ">
+                <h1>Subscribe And Follow Us</h1>
+                <p>Be part of the story and follow us on Twitter via <a class="text-warning" href="#">@name</a>  and subscribe to the <br> newsletter for news and updates about our workshops</p>
+                <div class="mb-3">
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" aria-describedby="emailHelp">
+                  <button type="button" class="btn btn-warning">SUBSCRIBE</button>
+                </div>
+              </div>
+
+            </div>
+           </div>
+          </div> 
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer style="background-color: #333333" >
+       <div  class="container text-white text-center">
+              <div class="pb-5">
+                <p class="py-5" style="font-size: 0.875rem;">Sample text. Click to select the text box. Click again or double <br> click to start editing the text.</p>
+                <a class="py-5" href="#">Website Templates  </a><span>created with</span> <a href="#">Website Builder Software.</a>
+              </div>
+       </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script>
+     
+      document
+        .getElementById("sidebar")
+        .addEventListener("click", function () {
+          //logic
+          document.getElementsByTagName("aside")[0].classList.add("active");
+        });
+
+      document
+        .getElementById("sidebar_close")
+        .addEventListener("click", function () {
+          document.getElementsByTagName("aside")[0].classList.remove("active");
+        });
+    </script>
+</body>
+
+</html>

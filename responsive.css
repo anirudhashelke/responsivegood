@@ -1,0 +1,71 @@
+@media screen and (max-width:768px) {
+    .a-banner img {
+        width: 340px;
+        height: 343px;
+        position: relative;
+        left: 0;
+    }
+    .a-dish{
+        width: 350px;
+    }
+    .a_menus{
+        width:30% !important;
+    }
+    .a_content svg{
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin-top: 230px;
+    }
+    .a-banner .a-dish{
+        z-index:1;
+        position: absolute;
+        /* left: 90px; */
+        left: 0;
+      }
+    .a_content_shape{
+        position: absolute;
+        left:-160px;
+        /* top: 0px; */
+        /* top: 100px; */
+        font-size: 12px;
+        text-align: center;
+    }
+    .a_content_shape h1{
+        font-size: 2rem;
+        margin-top: 140px;
+        font-weight: 700;
+    }
+    .a_content_shape p{
+        position: relative;
+        left:50px;
+       width: 60%;
+       
+    }
+    main .a-snack{
+        margin-left: 60px;
+        margin-bottom: 40px;
+    }
+    main .a-snack h1{
+        font-size: 2.25rem !important;
+    }
+    main .a-salad{
+        /* margin-right:100px; */
+        display: block !important;
+        margin-left: 50px !important;
+        padding: 0 !important;
+    }
+    main .a-oraganic .a-oragans h1{
+        font-size: 2.25rem;
+    }
+    .a_slides-1 .a_slides-1_box p{
+        font-size: 10px;
+    }
+    main .a-form .a-forms h1{
+        font-size: 2.25rem;
+    }
+    main .a-oraganic{
+        height: 350px;
+    }
+
+}
